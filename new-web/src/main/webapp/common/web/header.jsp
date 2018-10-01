@@ -8,20 +8,20 @@
         <div class="account_desc">
             <ul>
                 <%--<security:authorize access="isAnonymous()">--%>
-                    <%--<li>--%>
-                        <%--<a href="#">Đăng ký</a>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<a href='<c:url value="/dang-nhap"/>'>Đăng nhập</a>--%>
-                    <%--</li>--%>
+                    <li>
+                        <a href="#">Đăng ký</a>
+                    </li>
+                    <li>
+                        <a href='#"/>'>Đăng nhập</a>
+                    </li>
                 <%--</security:authorize>--%>
                 <%--<security:authorize access="isAuthenticated()">--%>
-                    <%--<li>--%>
-                        <%--<a href="#">Xin chào <%=SecurityUtils.getPrincipal().getFullName()%></a>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<a href='<c:url value="/logout"/>'>Thoát</a>--%>
-                    <%--</li>--%>
+                    <li>
+                        <a href="#">Xin chào User's name</a>
+                    </li>
+                    <li>
+                        <a href='#'>Thoát</a>
+                    </li>
                 <%--</security:authorize>--%>
             </ul>
         </div>

@@ -14,20 +14,20 @@
                 </small>
             </a>
         </div>
-        <%--<div class="navbar-buttons navbar-header pull-right collapse navbar-collapse" role="navigation">--%>
-            <%--<ul class="nav ace-nav">--%>
-                <%--<li class="light-blue dropdown-modal">--%>
-                    <%--<a data-toggle="dropdown" href="#" class="dropdown-toggle">--%>
-                        <%--Welcome, <%=SecurityUtils.getPrincipal().getFullName()%>--%>
-                    <%--</a>--%>
-                <%--<li class="light-blue dropdown-modal">--%>
-                    <%--<a href="<c:url value="/logout"/>">--%>
-                        <%--<i class="ace-icon fa fa-power-off"></i>--%>
-                        <%--Thoát--%>
-                    <%--</a>--%>
-                <%--</li>--%>
-                <%--</li>--%>
-            <%--</ul>--%>
-        <%--</div>--%>
+        <div class="navbar-buttons navbar-header pull-right collapse navbar-collapse" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue dropdown-modal">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        Welcome, Admin's name
+                    </a>
+                <li class="light-blue dropdown-modal">
+                    <a href="#">
+                        <i class="ace-icon fa fa-power-off"></i>
+                        Thoát
+                    </a>
+                </li>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
