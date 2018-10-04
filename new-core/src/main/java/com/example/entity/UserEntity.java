@@ -2,16 +2,15 @@ package com.example.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class UserEntity extends BaseEntity{
+public class UserEntity extends BaseEntity {
 
+    private static final long serialVersionUID = -2122270365654238025L;
 
-    private static final long serialVersionUID = -2100491257478596383L;
-    @Column(nullable = false,unique = true)
+    @Column(unique = true, nullable = false)
     private String userName;
 
     @Column(nullable = false)
@@ -20,19 +19,14 @@ public class UserEntity extends BaseEntity{
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private Integer status;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id",nullable = false),
-            inverseJoinColumns = @JoinColumn(name = "role_id",nullable = false))
+            joinColumns = @JoinColumn(name = "user_id", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "role_id", nullable = false))
     private List<RoleEntity> roles = new ArrayList<>();
-
-    public List<RoleEntity> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<RoleEntity> roles) {
-        this.roles = roles;
-    }
 
     public String getUserName() {
         return userName;
@@ -56,5 +50,21 @@ public class UserEntity extends BaseEntity{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public List<RoleEntity> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RoleEntity> roles) {
+        this.roles = roles;
     }
 }

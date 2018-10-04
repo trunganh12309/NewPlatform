@@ -15,11 +15,6 @@
         <div class="categories">
             <ul>
                 <h3>Thể loại</h3>
-                <%--<c:forEach var="category" items="${categories}">--%>
-                    <%--<li>--%>
-                        <%--<a href='${news}/${category.code}'>${category.name}</a>--%>
-                    <%--</li>--%>
-                <%--</c:forEach>--%>
             </ul>
         </div>
     </div>

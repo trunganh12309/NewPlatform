@@ -6,7 +6,6 @@
         <div class="footer-content">
 						<span class="bigger-120">
 							<span class="blue bolder">Trang quản trị</span>
-							TEAM &copy; 2013-2014
 						</span>
             &nbsp; &nbsp;
             <span class="action-buttons">

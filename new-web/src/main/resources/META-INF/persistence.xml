@@ -4,5 +4,6 @@
         <class>com.example.entity.UserEntity</class>
         <class>com.example.entity.RoleEntity</class>
         <class>com.example.entity.BaseEntity</class>
-    </persistence-unit>
+</persistence-unit>
 </persistence>
+

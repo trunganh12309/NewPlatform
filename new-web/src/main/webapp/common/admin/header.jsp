@@ -1,7 +1,7 @@
+<%@ page import="com.example.security.utils.SecurityUtils" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
-<%--<%@ page import="com.example.security.util.SecurityUtils" %>--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <div id="navbar" class="navbar navbar-default ace-save-state">
@@ -18,13 +18,10 @@
             <ul class="nav ace-nav">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        Welcome, Admin's name
+                        Welcome <%=SecurityUtils.getPrincipal().getFullName()%>
                     </a>
                 <li class="light-blue dropdown-modal">
-                    <a href="#">
-                        <i class="ace-icon fa fa-power-off"></i>
-                        Thoát
-                    </a>
+                    <a href="<c:url value="/logout"/> ">Thoát</a>
                 </li>
                 </li>
             </ul>

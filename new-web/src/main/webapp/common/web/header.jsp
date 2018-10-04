@@ -1,28 +1,28 @@
+<%@ page import="com.example.security.utils.SecurityUtils" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@include file="/common/taglib.jsp" %>
-<%--<%@ page import="com.example.security.util.SecurityUtils" %>--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <div class="header">
     <div class="headertop_desc">
         <div class="account_desc">
             <ul>
-                <%--<security:authorize access="isAnonymous()">--%>
+                <security:authorize access="isAuthenticated()">
                     <li>
-                        <a href="#">Đăng ký</a>
+                        <h1> Xin chào <%=SecurityUtils.getPrincipal().getFullName()%></h1>
                     </li>
                     <li>
-                        <a href='#"/>'>Đăng nhập</a>
+                        <a href="<c:url value="/logout"/> ">Thoát</a>
                     </li>
-                <%--</security:authorize>--%>
-                <%--<security:authorize access="isAuthenticated()">--%>
+                </security:authorize>
+                <security:authorize access="isAnonymous()">
                     <li>
-                        <a href="#">Xin chào User's name</a>
+                        <a href="<c:url value="/dang-nhap"/>">Đăng nhập</a>
                     </li>
                     <li>
-                        <a href='#'>Thoát</a>
+                        <a href="#">Đăng ký </a>
                     </li>
-                <%--</security:authorize>--%>
+                </security:authorize>
             </ul>
         </div>
         <div class="clear"></div>

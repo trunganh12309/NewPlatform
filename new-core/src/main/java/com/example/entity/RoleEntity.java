@@ -2,22 +2,21 @@ package com.example.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "role")
-public class RoleEntity extends BaseEntity{
+public class RoleEntity extends BaseEntity {
 
+    private static final long serialVersionUID = -6525302831793188081L;
 
-    private static final long serialVersionUID = -2326365995797050386L;
     @Column(nullable = false)
     private String name;
 
-    @Column(unique = true,nullable = false)
+    @Column(unique = true, nullable = false)
     private String code;
 
-    @ManyToMany(mappedBy = "roles",fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER)
     private List<UserEntity> users = new ArrayList<>();
 
     public String getName() {
@@ -34,5 +33,13 @@ public class RoleEntity extends BaseEntity{
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public List<UserEntity> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<UserEntity> users) {
+        this.users = users;
     }
 }
