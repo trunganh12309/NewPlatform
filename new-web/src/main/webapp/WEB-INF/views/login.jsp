@@ -11,7 +11,7 @@
     <p> Tài khoản không tồn tại trong hệ thống </p>
 </c:if>
 <c:if test="${param.accessDenied != null}">
-    <p> Tài khoản không tồn tại trong hệ thống </p>
+    <p> Bạn không có quyền truy cập trang này </p>
 </c:if>
 <form action="<c:url value="/j_spring_security_check"/>" method="POST">
     <input type="text" id="username" placeholder="Tên đăng nhập" name="j_username" required/>

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller(value = "homeControllerOfWeb")
 public class HomeController {
+
 	@RequestMapping(value = "/trang-chu",method = RequestMethod.GET)
 	public ModelAndView homePage(){
 		ModelAndView mav = new ModelAndView("web/home");
@@ -39,4 +40,5 @@ public class HomeController {
 	public String accessDenied(){
 		return "redirect:/dang-nhap?accessDenied";
 	}
+
 }

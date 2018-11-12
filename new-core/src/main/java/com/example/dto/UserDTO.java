@@ -1,20 +1,14 @@
 package com.example.dto;
 
 
-public class UserDTO {
-	private Long id;
+public class UserDTO extends AbstractDTO{
+
+	private static final long serialVersionUID = -2737941738199333452L;
+
 	private String userName;
 	private String fullName;
 	private String password;
 	private Integer status;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getUserName() {
 		return userName;

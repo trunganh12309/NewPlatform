@@ -14,7 +14,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="#">Trang chủ</a>
+                    <a href="<c:url value="/admin/home"/>">Trang chủ</a>
                 </li>
             </ul><!-- /.breadcrumb -->
         </div>

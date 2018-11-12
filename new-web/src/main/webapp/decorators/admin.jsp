@@ -20,7 +20,7 @@
     <%--sweetalert--%>
     <script type='text/javascript' src='<c:url value="/template/admin/assets/sweetalert2/sweetalert2.min.js"/>'></script>
     <link rel="stylesheet" href="<c:url value="/template/admin/assets/sweetalert2/sweetalert2.min.css"/>">
-
+    <script type='text/javascript' src='<c:url value="/template/admin/js/paging/jquery.twbsPagination.js" />'></script>
 </head>
 <body class="no-skin">
 
@@ -52,7 +52,7 @@
     </a>
 
 </div>
-<script src="<c:url value='/template/js/global_javascript.js' />"></script>
+<script src="<c:url value='/template/js/admin/global_admin.js' />"></script>
 <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
 <script src="<c:url value='/template/admin/assets/js/jquery-ui.custom.min.js' />"></script>
 <script src="<c:url value='/template/admin/assets/js/jquery.ui.touch-punch.min.js' />"></script>
